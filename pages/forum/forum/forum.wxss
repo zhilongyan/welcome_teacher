@@ -1,0 +1,122 @@
+page{
+   background-color: #fbf9fe;
+  letter-spacing:0rpx
+}
+
+.content {
+  height: 100vh;
+}
+
+.message {
+  border: 1px solid #eee;
+  box-shadow: 10rpx 10rpx 10rpx 5rpx #ccc;
+  margin: 20rpx 30rpx;
+  /*background-color: #eee;*/
+  display: block;
+  padding: 0 20rpx;
+  background-color: #fff
+}
+
+.messageHead {
+  display: flex;
+  flex-direction: row;
+  /*border: 1rpx solid #eee;*/
+  margin-top: 10rpx;
+}
+
+.messagePicture {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 10rpx 0;
+}
+
+.messagePicture image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.messageName{
+  width: 100%;
+  height: 80rpx;
+  color: #a0acac;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10rpx 
+}
+
+.time{
+  margin-top: 15rpx;
+  font-size: 20rpx;
+}
+
+.messageBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  /*margin: 20rpx 20rpx 5rpx;*/
+  margin: 0 20rpx 10rpx 0;
+}
+
+.messageTitle {
+  margin: 20rpx 0;
+  font-size: 30rpx
+}
+
+.messageContent {
+  color: #5d5d5d;
+  font-size: 25rpx;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  height: 50rpx;
+}
+
+.add {
+  width: 90rpx;
+  height: 90rpx;
+  position: fixed;
+  bottom: 120rpx;
+  right: 70rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+.upStatus {
+  color: #666;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downStatus {
+  text-align: center;
+  color: #666;
+}
+
+.answerCon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+

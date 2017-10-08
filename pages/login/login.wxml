@@ -1,0 +1,71 @@
+
+<!--login.wxml-->
+
+<!--登录页面-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="/image/index/loading.gif"></image>
+  </view>
+  <block wx:else>
+    <image class="title" src="/image/more/title.png"></image>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+        <image class="logo" src="/image/more/logo2.png"></image>
+      </view>
+      <view class="bd">
+        <form class="login-form">
+
+          <!--聚焦功能-->
+          <view class="input-group {{userid_focus ? 'active' : ''}}">
+            <text class="input-label">帐号</text>
+            <input type="number" cursor-spacing="30" id="userid" maxlength="13" placeholder="请输入统一认证码" bindinput="useridInput" bindfocus="inputFocus" bindblur="inputBlur" />
+          </view>
+          <view class="input-group {{passwd_focus ? 'active' : ''}}">
+            <text class="input-label">密码</text>
+            <input password="true" cursor-spacing="30" id="passwd" placeholder="默认密码为123456" bindinput="passwdInput" bindfocus="inputFocus" bindblur="inputBlur" value="{{initialPw}}"  maxlength="20"/>
+          </view>
+          <view class="input-group">
+            <text class="input-label">角色</text>
+            <picker value="{{roleArr}}" bindchange="roleChange" range="{{role}}">
+              <view>{{role[roleArr]}}</view>
+            </picker>
+          </view>
+          <view>
+          </view>
+          <!--<view class="login-help">
+            <view class='login-help_2'>
+              <text class="forget_code" bindtap="forget">忘记密码?</text>
+            </view>
+            <view class='login-help_2' bindtap="showHelp">
+              <text>帮助</text>
+              <image class="login-help-img" src="/image/more/help.png"></image>
+            </view>
+          </view>-->
+        </form>
+        <view class="confirm-btn" bindtap="bind">
+          <text>确认登录</text>
+        </view>
+      </view>
+      <view class="help" id="help" wx:if="{{help_status}}" bindtap="tapHelp">
+        <view class="box">
+          <view class="box-hd">
+            <text class="box-title">帮助</text>
+            <image class="box-close" src="/image/more/close.png" bindtap="hideHelp"></image>
+          </view>
+          <view class="box-bd">
+            <view class="help-q">1、帐号和密码是什么？</view>
+            <view class="help-a">
+              <text>帐号：自己工号</text>
+              <text>密码：初始密码或者已更改密码</text>
+              <text>其中初始密码为123456</text>
+            </view>
+            <!-- <view class="help-q">2、忘记密码？</view>
+            <view class="help-a">
+              <text>请访问统一身份认证平台进行忘记密码操作</text>
+            </view> -->
+          </view>
+        </view>-->
+      </view>
+    </view>
+  </block>
+</view>

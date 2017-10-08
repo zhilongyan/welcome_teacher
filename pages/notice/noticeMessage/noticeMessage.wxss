@@ -1,0 +1,38 @@
+.title {
+  padding: 30rpx 30rpx 10rpx 30rpx;
+  font-size: 50rpx;
+  text-align: center;
+  /*margin: -30rpx 0 0 0 */
+}
+.date {
+  font-size: 30rpx;
+  margin: 8rpx 40rpx 0 ;
+  color: lightgray;
+  display: flex;
+  justify-content: space-between
+}
+
+.content {
+  padding: 6rpx 40rpx;
+  color: gray;
+  line-height: 1.5;
+}
+
+view {
+  font-family: "微软雅黑";
+}
+
+.del{
+  height: 50rpx;
+  position: absolute;
+  top: 5rpx;
+  right: 10rpx
+  /*overflow: hidden*/
+  /*float: right*/
+}
+
+.del image{
+  width: 50rpx;
+  height: 50rpx;
+  /*float: right*/
+}

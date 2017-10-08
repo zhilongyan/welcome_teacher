@@ -1,0 +1,135 @@
+@import "../../common/weui.wxss";
+.firstContent {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  /* height: 500rpx; */
+  margin: 0;
+  height: 360rpx
+}
+
+.container {
+  flex: 0;
+  background: #eee;
+}
+
+.picker {
+  padding: 19rpx 26rpx;
+  background-color: #fff;
+}
+
+.sureButton {
+  /*position: absolute;*/
+  top: 50rpx;
+}
+
+.messageContainer{
+  margin-top: 380rpx
+}
+.content {
+  margin: 20rpx;
+}
+
+.wode_item_wrap {
+  background-color: #fff;
+  font-size: 14px;
+  /*margin-top: 15px;*/
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  clear: left;
+  -webkit-box-shadow: 0 0 10px rgba(0, 204, 204, 0.2);
+  -moz-box-shadow: 0 0 10px rgba(0, 204, 204, 0.2);
+  box-shadow: 0 0 10px rgba(0, 204, 204, 0.2);
+  overflow: hidden;
+}
+
+.wode_item {
+  margin: 0 auto;
+  width: 90%;
+  min-height: 60rpx;
+  /*height: 60rpx;*/
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 10px;
+  line-height: 33px;
+  /*position: relative;*/
+  color: #696969;
+  display: flex;
+  /*justify-content: space-between*/
+}
+
+.wode_item_Info {
+  width: 70%;
+  margin-left: 40rpx;
+}
+
+.wode_item_left {
+  height: 33px;
+  width: 50%;
+  float: left;
+}
+
+.wode_item_left_1 {
+  width: 30%;
+  min-width: 50px;
+  float: left;
+  /*border: 1px solid #696969;*/
+}
+
+.wode_item_left_2 {
+  float: left;
+  width: 65%;
+  /*border: 1px solid #696969;*/
+}
+
+.tagView {
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.tagView text {
+  margin: 0 25rpx;
+}
+
+.tag {
+  /*display: inline-block*/
+  display: flex;
+}
+
+.detail {
+  font-size: 25rpx;
+  height: 60rpx;
+  color: rgb(78, 169, 233);
+  text-decoration: underline;
+  display: flex;
+  align-items: flex-end;
+}
+
+.address {
+  margin: 0 auto;
+  width: 90%;
+  min-height: 60rpx;
+  border-bottom: 1px solid #e5e5e5;
+  padding-left: 10px;
+  line-height: 33px;
+  color: #696969;
+  display: flex;
+}
+
+.upStatus {
+  color: #666;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downStatus {
+  text-align: center;
+  color: #666;
+}
+
+.phoneNum{
+  color: green;
+}

@@ -1,0 +1,63 @@
+{
+  "pages": [
+      "pages/home/index/index",
+    "pages/welcome/welcome",
+    "pages/home/detail/detail",
+    "pages/me/wode/wode",
+    "pages/notice/index/index",
+    "pages/me/person_Info/person_Info",
+    "pages/me/selectMajor/selectMajor",
+    "pages/notice/noticeMessage/noticeMessage",
+    "pages/notice/addNotice/addNotice",
+    "pages/login/forget",
+    "pages/me/myClass/myClass",
+    "pages/forum/forum/forum",
+    "pages/login/login",
+    "pages/station/meetStation/meetStation",
+    "pages/me/resetPassword/resetPassword",
+    "pages/me/teacherStudent/teacherStudent",
+    "pages/me/changeImg/changeImg",
+    "pages/me/reply/reply",
+    "pages/forum/forumMessage/forumMessage"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#9cf",
+    "navigationBarTitleText": "智能迎新系统",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "color": "#929292",
+    "backgroundColor": "#fff",
+    "selectedColor": "#07c1fa",
+    "borderStyle": "black",
+    "font-size": "32rpx",
+    "list": [
+      {
+        "pagePath": "pages/home/index/index",
+        "text": "新生动态",
+        "iconPath": "image/shouye1.png",
+        "selectedIconPath": "image/shouye.png"
+      },
+      {
+        "pagePath": "pages/notice/index/index",
+        "text": "通知",
+        "iconPath": "image/car1.png",
+        "selectedIconPath": "image/car.png"
+      },
+      {
+        "pagePath": "pages/forum/forum/forum",
+        "text": "问答",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index_focus.png"
+      },
+      {
+        "pagePath": "pages/me/wode/wode",
+        "text": "我",
+        "iconPath": "image/wode1.png",
+        "selectedIconPath": "image/wode.png"
+      }
+    ]
+  }
+}

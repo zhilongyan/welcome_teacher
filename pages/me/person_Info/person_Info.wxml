@@ -1,0 +1,53 @@
+<view class="bd">
+  <view class="login-form oldInfo" wx:if="{{!changeStatus}}">
+    <!--聚焦功能-->
+    <view class="input-group ">
+      <text class="input-label">QQ</text>
+      <text class="message">{{qq}}</text>
+    </view>
+    <view class="input-group ">
+      <text class="input-label">微信</text>
+      <text class="message">{{wechat}}</text>
+    </view>
+    <view class="input-group ">
+      <text class="input-label">手机号</text>
+      <text class="message">{{phone}}</text>
+      <view class="weui-cell__ft" wx:if="{{!phoneStatus}}">
+        <icon class="weui-icon-radio" type="warn" size="20"></icon>
+      </view>
+    </view>
+    <view class="info">
+      <text>个人介绍：</text>
+      <view class="infoMessage">{{info}}</view>
+    </view>
+    <view class="btn-area">
+      <button class="confirm-btn" bindtap="change">修改信息</button>
+    </view>
+  </view>
+  <form bindsubmit="formSubmit" class="login-form newInfo" wx:else>
+    <!--聚焦功能-->
+    <view class="input-group ">
+      <text class="input-label">QQ</text>
+      <input type="number" cursor-spacing="50" id="userid" maxlength="14" bindinput="QQ_Input" name="qqNum" value="{{qq}}" />
+    </view>
+    <view class="input-group ">
+      <text class="input-label">微信</text>
+      <input type="text" cursor-spacing="50" id="userid" name="wechat" value="{{wechat}}" bindblur="wechatBlur" />
+    </view>
+    <view class="input-group ">
+      <text class="input-label">手机号</text>
+      <input type="number" cursor-spacing="50" id="userid" maxlength="13" bindblur="phone" name="phoneNum" value="{{phone}}" />
+      <view class="weui-cell__ft" wx:if="{{!phoneStatus}}">
+        <icon class="weui-icon-radio" type="warn" size="20"></icon>
+      </view>
+    </view>
+    <view class="info">
+      <text>个人介绍：</text>
+      <textarea name="info" cursor-spacing="50" value="{{info}}" />
+    </view>
+    <view class="btn-area">
+      <button formType="submit" class="confirm-btn " type="primary">确认完善</button>
+    </view>
+  </form>
+
+</view>

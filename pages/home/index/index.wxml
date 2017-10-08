@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="title">新生动态</view>
+  <text class="allNum">您管理的新生总人数：{{totalNum}}</text>
+  <view class="content">
+    <text class="contentTitle">注册软件情况：</text>
+    <progress percent="{{register}}" show-info stroke-width="10" active/>
+    <view class="detail"><text class="see" bindtap='see' data-name="0">注册人数：{{registerNum}}</text><text class="see" bindtap='see' data-name="1">未注册人数：{{NotRegisterNum}}</text></view>
+  </view>
+  <view class="content">
+    <text class="contentTitle">接站需求情况：(乘坐公共交通/总人数)</text>
+    <progress percent="{{usercar}}" show-info stroke-width="10" color="yellow" active/>
+    <view class="detail"><text class="see" bindtap='see' data-name="2">自驾：{{selfNum}}</text><text class="see" bindtap='see' data-name="3">乘坐公共交通：{{publicNum}}</text><text class="see" bindtap='see' data-name="4">未选择：{{totalNum-selfNum-publicNum}}</text></view>
+  </view>
+  <view class="content">
+    <text class="contentTitle">到站接到情况:(成功接站人数/乘坐公共交通人数)</text>
+    <progress percent="{{receive}}" show-info stroke-width="10" color="blue" active/>
+    <view class="detail"><text class="see" bindtap='see' data-name="5">成功接到：{{successReceiveNum}}</text><text class="see" bindtap='see' data-name="6">未接到：{{publicNum-successReceiveNum}}</text></view>
+  </view>
+  <view class="content">
+    <text class="contentTitle">宿舍选择情况：</text>
+    <progress percent="{{dorm}}" show-info stroke-width="10" color="purple" active/>
+    <view class="detail"><text class="see" bindtap='see' data-name="7">已选宿舍：{{dormNum}}</text><text>未选宿舍：{{totalNum - dormNum}}</text></view>
+  </view>
+  <view class="content">
+    <text class="contentTitle">宿舍入住情况：</text>
+    <progress percent="{{sureDorm}}" show-info stroke-width="10" color="red" active/>
+    <view class="detail"><text class="see" bindtap='see' data-name="8">成功入住：{{successDorm}}</text><text class="see" bindtap='see' data-name="9">未入住：{{totalNum-successDorm}}</text></view>
+  </view>
+  <view class="content">
+    <text class="contentTitle red">点击上方蓝色字可以查看详细情况</text>
+  </view>
+</view>

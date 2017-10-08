@@ -1,0 +1,74 @@
+/* pages/me/selectMajor/selectMajor.wxss */
+
+.input-group {
+  /*width: 90%;*/
+  display: flex;
+  align-items: center;
+  padding: 25rpx 10rpx;
+  margin: 20rpx 3%;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px solid #f4f4f4;
+}
+
+.input-group.active {
+  border: 2px solid #7acfa6;
+}
+
+.input-label {
+  color: #888;
+  font-size: 13pt;
+  height: 25rpx;
+  line-height: 25rpx;
+  padding: 0 25rpx;
+  border-right: 1px solid #d8d8d8;
+}
+
+.input-group input, .input-group picker {
+  flex: 1;
+  font-size: 13pt;
+  min-height: 52rpx;
+  height: 52rpx;
+  line-height: 52rpx;
+  padding: 0 25rpx;
+}
+
+.input-placeholder, .input-group picker.placeholder {
+  color: #ccc;
+}
+
+.majorView {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*.add{
+    border: 2px solid #f4f4f4;
+    width: 80rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 80rpx;
+    border-radius: 50%;
+    text-align: center
+}*/
+
+.add {
+  font-size: 30rpx;
+  float: right;
+  margin: 0 3%;
+  color: #7acfa6;
+  text-decoration: underline;
+}
+
+.head {
+  margin: 20rpx 3%;
+}
+
+.majornameInput {
+  height: 50rpx;
+}
+
+.sure{
+  margin: 60rpx 3% 30rpx;
+}

@@ -1,0 +1,48 @@
+.container{
+  padding: 0
+}
+
+.title{
+    text-align: center;
+    margin: 30rpx 0;
+    font-size: 50rpx
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 25rpx 0
+}
+
+.contentTitle{
+    margin: 5rpx 30rpx 5rpx 20rpx;
+    font-size: 30rpx;
+    display: flex;
+    justify-content: space-between
+}
+
+.content progress{
+    width: 710rpx;
+    margin: 5rpx auto
+}
+
+.detail{
+    width: 700rpx;
+    margin: 0 30rpx 0 20rpx;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30rpx
+}
+
+.allNum{
+  margin-left: 20rpx
+}
+
+.see{
+  color: blue;
+}
+
+.red{
+  color: red;
+  font-size: 25rpx;
+}

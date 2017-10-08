@@ -1,0 +1,22 @@
+<!--pages/me/selectMajor/selectMajor.wxml-->
+<view class="container">
+  <view class="head">
+    请选择您教的系和班级
+  </view>
+  <view class="body">
+    <block wx:for="{{majorView}}">
+      <view class="input-group">
+        <text class="input-label">{{item.majorname}}</text>
+        <picker value="{{item.majorIndex}}" data-id="{{index}}" bindchange="roleChange" range="{{majorname}}">
+          <view class="majornameInput">{{majorname[item.majorIndex]}}</view>
+        </picker>
+      </view>
+      <view class="input-group">
+        <text class="input-label">{{item.classname}}</text>
+        <input placeholder="例：1801，1802" bindblur="getClass" data-id="{{index}}" value="{{classArr[index]}}"/>
+      </view>
+    </block>
+    <view class="add" bindtap="addMajor">添加专业</view>
+  </view>
+  <view class="bottom"><button type="primary" class="sure" bindtap="sureMajor">确定</button></view>
+</view>

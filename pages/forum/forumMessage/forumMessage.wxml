@@ -1,0 +1,53 @@
+<view class="content">
+  <view class="questionView" bindtap="floor">
+    <view class="head">
+      <view class="face">
+        <image src="{{message[0].from_face}}" class='questionImg' wx:if="{{message[0].from_face!=null}}"></image>
+        <image wx:else src="../../../image/touxiang.jpg" class='questionImg'></image>
+      </view>
+      <view class="name">
+        <text class="questionName">{{message[0].from_name}}</text>
+        <text class="questionTime">{{message[0].time}}</text>
+      </view>
+    </view>
+    <view class="body">
+      <text class="questionTitle" wx:if="{{message[0].title!=null}}">{{message[0].title}}</text>
+      <text class="questionContent">{{message[0].content}}</text>
+    </view>
+  </view>
+  <view class="answer">
+    <view wx:for="{{message}}" class="answerMes" bindtap="replayThis" id="{{index}}">
+      <block wx:if="{{index!=0}}">
+        <view class="head">
+          <view class="answerImg">
+            <image src="{{item.from_face}}" wx:if="{{item.from_face!=null}}"></image>
+            <image wx:else src="../../../image/touxiang.jpg"></image>
+
+          </view>
+          <view class="name">
+            <text>{{item.from_name}}</text>
+            <view class="time">
+              <!--<text>第{{index + 1}}楼</text>-->
+              <text>{{item.time}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="body">
+          <text class="answerQue" hidden="{{item.to_name == message[0].from_name}}">回复 {{item.to_name}}:</text>
+          <text>{{item.content}}</text>
+        </view>
+
+      </block>
+    </view>
+  </view>
+  <view class="downStatus">
+    <text wx:if="{{downStatus == true}}">下拉加载</text>
+    <text wx:if="{{loadStatus == true}}">正在加载...</text>
+    <text wx:if="{{loadAllStatus == true}}">已加载全部</text>
+  </view>
+  <view class="replay">
+    <input placeholder="回复楼主" bindinput="replayContent" class="sendInput" focus="{{focus}}" wx:if="{{to_message.to_name == message[0].from_name}}" value="{{replayMessage}}" />
+    <input placeholder="回复{{to_message.to_name}}" bindinput="replayContent" class="sendInput" focus="{{focus}}" value="{{replayMessage}}" wx:else/>
+    <button bindtap="sendReplay" type="primary" class="sendBtn">发送</button>
+  </view>
+</view>

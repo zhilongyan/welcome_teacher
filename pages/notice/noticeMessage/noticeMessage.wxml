@@ -1,0 +1,10 @@
+<view class="del" bindtap="del" wx:if="{{message.del}}">
+  <image src="/image/del.png"></image>
+</view>
+<view class="title">{{message.title}}</view>
+
+<view class="date"><text>{{message.time}}</text><text>发稿人：{{message.writer}}</text></view>
+<view class="content">
+  <text>{{message.content}}</text>
+</view>
+<view class="bottom">{{bottom}}</view>

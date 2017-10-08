@@ -1,0 +1,67 @@
+<!--pages/notice/index/index.wxml-->
+<view class="container">
+  <!--<view wx:if="{{schoolNotice.length == 0}}"></view>-->
+  <view class="{{schoolNotice.length == 0?'':'line'}}"></view>
+  <view class="push" hidden="{{schoolNotice.length == 0}}">
+
+    <view class="pushText">{{schoolTitle}}</view>
+  </view>
+  <view class="view">
+    <block wx:for="{{schoolNotice}}">
+      <view class="bar">
+        <navigator url="../noticeMessage/noticeMessage?id={{item.id}}">
+          <!--<view class="line">|</view>-->
+          <!--<image src="../../../image/viewimg.png" class="viewimg"></image>-->
+          <view class="head">
+            <view class="title">{{item.title}}</view>
+            <view class="time">{{item.time}}</view>
+          </view>
+          <view class="pushContent">{{item.content}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <block wx:if="{{teacherNotice.length == 0}}"></block>
+  <view class="line" wx:else></view>
+  <view class="push" hidden="{{teacherNotice.length == 0}}">
+    <view class="pushText">{{teacherTitle}}</view>
+  </view>
+  <view class="view">
+    <block wx:for="{{teacherNotice}}">
+      <view class="bar">
+        <navigator url="../noticeMessage/noticeMessage?id={{item.id}}&del={{item.del}}">
+          <!--<view class="line">|</view>-->
+          <!--<image src="../../../image/viewimg.png" class="viewimg"></image>-->
+          <view class="head">
+            <view class="title">{{item.title}}</view>
+            <view class="time">{{item.time}}</view>
+          </view>
+          <view class="pushContent">{{item.content}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <block wx:if="{{stuNotice.length == 0}}"></block>
+  <view class="line" wx:else></view>
+  <view class="push" hidden="{{stuNotice.length == 0}}">
+    <view class="pushText">{{stuTitle}}</view>
+  </view>
+  <view class="view">
+    <block wx:for="{{stuNotice}}">
+      <view class="bar">
+        <navigator url="../noticeMessage/noticeMessage?id={{item.id}}&del={{item.del}}">
+          <!--<view class="line">|</view>-->
+          <!--<image src="../../../image/viewimg.png" class="viewimg"></image>-->
+          <view class="head">
+            <view class="title">{{item.title}}</view>
+            <view class="time">{{item.time}}</view>
+          </view>
+          <view class="pushContent">{{item.content}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+  <navigator url="../addNotice/addNotice" open-type="navigate" class="add">
+    <image src="../../../image/addQuestion.png"></image>
+  </navigator>
+</view>

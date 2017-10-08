@@ -1,0 +1,4 @@
+<view class="content">
+<image src="{{face}}"></image>
+<button type="primary" bindtap="changeImg" class="changeButton">选择头像</button>
+</view>

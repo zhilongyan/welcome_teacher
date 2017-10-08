@@ -1,0 +1,46 @@
+<!--我的个人信息展示页-->
+<view class="container">
+  <view class="content">
+    <view class="personal_info">
+      <view class="photo_wrap">
+        <image src="{{userInfo.face}}" class="photo" mode="scaleToFill" bindtap="changeImg"></image>
+      </view>
+      <view class="user-name">
+        <view class="nickname">
+          姓名：{{userInfo.name}}
+        </view>
+        <view class="Student-ID">
+          工号：{{userInfo.bh}}
+        </view>
+      </view>
+    </view>
+
+    <!--第一栏-->
+    <view class="wode_item_wrap">
+      <view class="wode_item" bindtap="{{item.bindtap}}" wx:for="{{Array}}">
+        <span class="arrow_wrap_left"><image class="img" src="{{item.img_Url_1}}" ></image></span>
+        <span class="arrow_wrap_middle">{{item.item}} </span>
+        <span class="arrow_wrap">
+    <image class="img_2"  src="{{item.img_Url_2}}" ></image>
+    </span>
+        <view class='arrow_wrap_right'> </view>
+      </view>
+    </view>
+
+    <!--第二栏
+        <view class="wode_item_wrap">
+          <view class="wode_item" bindtap="{{item.bindtap}}" wx:for="{{Array_about}}">
+            <span class="arrow_wrap_left"><image class="img" src="{{item.img_Url_1}}" ></image></span> 
+            <span class="arrow_wrap_middle">{{item.item}} </span> 
+            <span class="arrow_wrap">
+    <image class="img_2"  src="{{item.img_Url_2}}" ></image>
+    </span> 
+            <view class='arrow_wrap_right'> </view>
+          </view>
+        </view>-->
+    <view class="wode_item_wrap">
+      <view class="wode_out " bindtap="quit">退出</view>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,36 @@
+<view class="content" wx:if="{{openStatus}}">
+  <!--<view wx:if="{{upStatus==true}}" class="upStatus">
+    <text>刷新中...</text>
+  </view>-->
+  <view wx:for="{{message}}" class="message">
+    <view class="messageHead">
+      <view class="messagePicture">
+        <image wx:if="{{item.from_face==null || item.from_face == ''}}" src="/image/touxiang.jpg"></image>
+        <image  src="{{item.from_face}}" wx:else></image>
+      </view>
+      <view class="messageName">
+        <text class="name">{{item.from_name}}</text>
+        <text class="time">{{item.time}}</text>
+      </view>
+    </view>
+    <navigator url="../forumMessage/forumMessage?id={{item.id}}">
+      <view class="messageBody" bindtap="turnMessage" id="{{index}}">
+        <view class="messageTitle">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="messageContent">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+    </navigator>
+    <!--<view class="time">{{item.time}}</view>-->
+  </view>
+  <view class="downStatus">
+    <text wx:if="{{downStatus == true}}">下拉加载</text>
+    <text wx:if="{{loadStatus == true}}">正在加载...</text>
+    <text wx:if="{{loadAllStatus == true}}">已加载全部</text>
+  </view>
+</view>
+<view class="container" wx:else>
+  <text>暂未开放，敬请期待！</text>
+</view>

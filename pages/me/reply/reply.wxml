@@ -1,0 +1,27 @@
+<view class="answer">
+  <block wx:for="{{message}}">
+    <navigator url="/pages/forum/forumMessage/forumMessage?id={{item.question_id}}">
+      <view class="replyView">
+        <view class="replyHead">
+          <view>
+            <image src="/image/touxiang.jpg" class="replyImg" wx:if="{{item.from_face == null || item.from_face == ''}}"></image>
+            <image src="{{item.from_face}}" class="replyImg" wx:else></image>
+          </view>
+          <view class="name"><text>{{item.from_name}}</text><text>回复了：</text></view>
+        </view>
+        <view class="replyContent">{{item.content}}</view>
+        <view class="time">{{item.time}}</view>
+      </view>
+    </navigator>
+  </block>
+  <view class="downStatus">
+    <text wx:if="{{downStatus == true}}">下拉加载</text>
+    <text wx:if="{{loadStatus == true}}">正在加载...</text>
+    <text wx:if="{{loadAllStatus == true}}">已加载全部</text>
+  </view>
+  <view class="container" wx:if="{{noMessage}}">
+    <navigator url="../../forum/addQuestion/addQuestion">
+      <text>还没有人回复你</text>
+    </navigator>
+  </view>
+</view>

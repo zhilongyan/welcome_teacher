@@ -1,0 +1,26 @@
+/* pages/login/forget.wxss */
+@import "login.wxss";
+
+.codeButton{
+    margin-right: 20rpx; 
+    /*height:50rpx;
+    display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*font-size: 30rpx*/
+}
+.codeInput{
+    width: 50%
+}
+
+.codeView{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: -30rpx 0
+}
+
+.icon{
+    width: 60rpx;
+    height: 60rpx
+}

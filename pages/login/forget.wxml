@@ -1,0 +1,40 @@
+
+<!--pages/login/forget.wxml-->
+<view class="forget">
+  <form class="login-form" bindsubmit="formSubmit">
+
+    <!--聚焦功能-->
+    <view class="input-group">
+      <text class="input-label">账号</text>
+      <input type="number" cursor-spacing="30" id="userid" maxlength="13" placeholder="账号" name="userid" bindblur="userid" />
+    </view>
+    <view class="input-group">
+      <text class="input-label">手机号</text>
+      <input type="number" cursor-spacing="30" id="userid" maxlength="11" placeholder="请输入预留的手机号" name="phone" bindinput="phoneLength" value="{{phoneNum}}"/>
+      <view class="weui-cell__ft icon" wx:if="{{!phoneIcon}}">
+        <icon class="weui-icon-radio" type="warn" size="20"></icon>
+      </view>
+    </view>
+    <view class="codeView">
+      <view class="input-group codeInput">
+        <text class="input-label">验证码</text>
+        <input type="number" cursor-spacing="30" bindinput="code" value="{{code}}" maxlength="6"/>
+      </view>
+      <view>
+        <button bindtap="sendCode" hidden="{{time<60}}" class="codeButton">发送验证码</button>
+        <button hidden="{{time==60}}" class="codeButton">还剩{{time}}秒</button>
+      </view>
+    </view>
+    <view class="input-group">
+      <text class="input-label">新密码</text>
+      <input password="true" cursor-spacing="30" id="passwd" placeholder="新密码" name="password" maxlength="20" bindblur="password"/>
+    </view>
+    <view class="input-group">
+      <text class="input-label">重复密码</text>
+      <input password="true" cursor-spacing="30" id="passwd" placeholder="重复新密码" name="againPassword"  maxlength="20" bindblur="againPassword"/>
+    </view>
+    <view class="confirm-btn">
+      <button form-type="submit" type="primary" disabled="{{finishDisabled}}">提交</button>
+    </view>
+  </form>
+</view>

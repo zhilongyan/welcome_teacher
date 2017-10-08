@@ -1,0 +1,60 @@
+<!--pages/home/detail/detail.wxml-->
+<!--搜索框  -->
+<view class="searchView"><image src="/image/search.png" class="searchIcon" bindtap="search"></image><input placeholder="姓名/学号" confirm-type="search" bindconfirm="search" class="search" bindinput="searchContent"/></view>
+<view class="messageContainer">
+  <view wx:for="{{message}}" class="content">
+    <view class="wode_item_wrap">
+      <view class="wode_item">
+        <view class="wode_item_left">
+          <view class="wode_item_left_1">
+            <text>姓名</text>
+          </view>
+          <view class="wode_item_left_2"> {{item.name}}</view>
+        </view>
+        <view class="wode_item_left">
+          <view class="wode_item_left_1">
+            <text>性别</text>
+          </view>
+          <view class="wode_item_left_2"> {{item.sex}}</view>
+        </view>
+      </view>
+      <view class="wode_item">
+        <view class="wode_item_left">
+          <view class="wode_item_left_1">
+            <text>电话</text>
+          </view>
+          <view class="wode_item_left_2 phoneNum" bindtap='call' data-id="{{item.phone}}"> {{item.phone}}</view>
+        </view>
+        <view class="wode_item_left">
+          <view class="wode_item_left_1">
+            <text>宿舍</text>
+          </view>
+          <view class="wode_item_left_2"> {{item.dormbh}}</view>
+        </view>
+      </view>
+      <view class="wode_item">
+        <view class="wode_item_left">
+          <view class="wode_item_left_1">
+            <text>QQ</text>
+          </view>
+          <view class="wode_item_left_2"> {{item.qq}}</view>
+        </view>
+        <view class="wode_item_left">
+          <view class="wode_item_left_1">
+            <text>微信</text>
+          </view>
+          <view class="wode_item_left_2"> {{item.wechat}}</view>
+        </view>
+      </view>
+      <view class="address">
+        <text>地区</text>
+        <view class="wode_item_Info">{{item.address}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="downStatus">
+  <text wx:if="{{downStatus == true}}">下拉加载</text>
+  <text wx:if="{{loadStatus == true}}">正在加载...</text>
+  <text wx:if="{{loadAllStatus == true}}">已加载全部</text>
+</view>

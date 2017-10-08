@@ -1,0 +1,78 @@
+page{
+  background-color:  #fbf9fe;
+  letter-spacing: 0rpx
+}
+.replyView {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1rpx solid #eee;
+  box-shadow: 1rpx 1rpx 1rpx #eee;
+  margin: 10rpx;
+  padding: 10rpx;
+  background-color: #fff
+}
+
+.replyImg {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.replyHead {
+  display: flex;
+  flex-direction: row;
+}
+
+.name{
+  display: flex;
+  align-items: center;
+    font-size: 30rpx;
+    color: #a0acac
+}
+
+.name text:first-child{
+  margin:0 20rpx;
+
+}
+
+.downStatus {
+  text-align: center;
+  color: #666;
+}
+
+.upStatus {
+  color: #666;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer {
+  height: 100vh;
+}
+
+/*.content {
+  height: 100%;
+}*/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+
+.time{
+  font-size: 20rpx;
+  margin: 10rpx 0 5rpx;
+  color: #a0acac
+}
+
+.replyContent{
+  font-size: 30rpx
+}
